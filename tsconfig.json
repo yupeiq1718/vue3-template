@@ -16,8 +16,9 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
-    }
+    },
+    "types": ["vite/client", "vite-plugin-pages/client", "vite-plugin-vue-layouts/client"]
   },
-  "include": ["src/**/*.{ts,tsx,vue,d.ts}", "./auto-imports.d.ts", "./components.d.ts"],
+  "include": ["src/**/*.{ts,tsx,vue,d.ts}", "./auto-imports.d.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

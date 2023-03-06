@@ -1,16 +1,10 @@
-import { createRouter, createWebHistory, RouterOptions, Router, RouteRecordRaw } from 'vue-router'
-
-const routes: RouteRecordRaw[] = [
-  {
-    path: '/',
-    name: 'Home',
-    component: () => import('@/views/HomePage.vue')
-  }
-]
+import { createRouter, createWebHistory, createWebHashHistory, RouterOptions, Router } from 'vue-router'
+import { setupLayouts } from 'virtual:generated-layouts'
+import generatedRoutes from 'virtual:generated-pages'
 
 const options: RouterOptions = {
-  history: createWebHistory('/'),
-  routes
+  history: (import.meta.env.VITE_APP_ROUTER_MODE === 'history') ? createWebHistory(import.meta.env.VITE_APP_BASE_URL) : createWebHashHistory(import.meta.env.VITE_APP_BASE_URL),
+  routes: setupLayouts(generatedRoutes)
 }
 
 const router: Router = createRouter(options)

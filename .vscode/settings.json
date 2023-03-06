@@ -21,5 +21,6 @@
     "source.fixAll.eslint": true,
     "source.fixAll.stylelint": true
   },
-  "appService.showBuildDuringDeployPrompt": false
+  "appService.showBuildDuringDeployPrompt": false,
+  "typescript.tsdk": "node_modules/typescript/lib"
 }
