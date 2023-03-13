@@ -18,6 +18,11 @@
 - .env.gh-pages
   - VITE_APP_BASE_URL : `${GitHub 專案名稱}`
 
+### Slack 綁定
+- 在 `#team-front-end-develop` 群組中輸入 `/github subscribe ${owner}/${repo}` 即可將進行綁定，未來群組成員可以收到 `issues`, `pulls`, `commits`, `releases`, `deployments` 相關的訊息
+- 若專案結束，輸入 `/github unsubscribe ${owner}/${repo}` 即可解除綁定
+- 若要綁定其他 Slack 群組，需要在該群組選項 `Integrations/Apps` 中新增 `Github`，並重複以上操作即可
+
 ## 開發習慣
 
 ### 技術框架
