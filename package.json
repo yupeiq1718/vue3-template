@@ -7,7 +7,7 @@
     "build:gh-pages": "vite build --mode gh-pages",
     "dev": "vite",
     "dev:gh-pages": "vite --mode gh-pages",
-    "prepare": "husky install",
+    "prepare": "husky install && husky add .husky/commit-msg \"npx --no -- commitlint --edit $1\" && husky add .husky/pre-merge-commit \"yarn lint:script && yarn lint:style\" && husky add .husky/pre-push \"yarn lint:script && yarn lint:style\" && husky add .husky/pre-commit \"yarn lint:script && yarn lint:style\"",
     "preview": "vite preview",
     "lint:script": "eslint src --fix --ext .ts,.tsx,.vue,.js,.jsx",
     "lint:style": "stylelint  src/**/*.{vue,scss,css,sass,less} --fix"
